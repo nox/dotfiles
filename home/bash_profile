@@ -1,0 +1,29 @@
+# Environment
+
+if [ -d /Applications/Xcode.app/Developer/usr/bin ]; then
+  export PATH=/Applications/Xcode.app/Developer/usr/bin:$PATH
+fi
+
+export HISTCONTROL=ignorespace:erasedups
+export HISTSIZE=2000
+
+export BREW_PREFIX=`brew --prefix 2>/dev/null`
+
+if [ -n $BREW_PREFIX ]; then
+  export PATH=$BREW_PREFIX/bin:$BREW_PREFIX/sbin:$PATH
+
+  if [ -n "`brew --prefix ruby 2>/dev/null`" ]; then
+    export GEM_HOME=`brew --prefix ruby`
+    export PATH=`brew --prefix ruby`/bin:$PATH
+  fi
+
+  if [ -d $BREW_PREFIX/share/python ]; then
+    export PATH=$BREW_PREFIX/share/python:$PATH
+  fi
+fi
+
+[ -d ~/bin ] && export PATH=~/bin:$PATH
+
+# Source non login initialisation file
+
+[ -f ~/.bashrc ] && . ~/.bashrc

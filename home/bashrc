@@ -1,0 +1,52 @@
+# Bash behaviour
+
+shopt -s \
+  checkhash \
+  histreedit \
+  histappend
+
+[ $BASH_VERSINFO -ge 4 ] && shopt -s \
+    autocd \
+    globstar
+
+# Colors
+
+export CLICOLOR=1
+export LSCOLORS=Exfxcxdxbxegedabagacad
+export GREP_OPTIONS=--color
+
+# Prompt
+
+GIT_PS1_SHOWDIRTYSTATE=
+GIT_PS1_SHOWSTASHSTATE=
+GIT_PS1_SHOWUNTRACKEDFILES=
+GIT_PS1_SHOWUPSTREAM=auto
+function __git_ps1 {
+  :
+}
+
+PS1='\
+\[`tput setaf 2`\]\u@\h\
+\[`tput sgr0`\]:\
+\[`tput setaf 6`\]\w\
+\[`tput setaf 3`\]\
+`__git_ps1 [%s]`\
+\[`tput sgr0`\]\$ '
+
+# Completions
+
+if [ -n $BREW_PREFIX ]; then
+  if [ $BASH_VERSINFO -ge 4 ] \
+      && [ -f $BREW_PREFIX/share/bash-completion/bash_completion ]; then
+    . $BREW_PREFIX/share/bash-completion/bash_completion
+  elif [ -f $BREW_PREFIX/etc/bash_completion ]; then
+    . $BREW_PREFIX/etc/bash_completion
+  fi
+  [ -f $BREW_PREFIX/etc/profile.d/z.sh ] && . $BREW_PREFIX/etc/profile.d/z.sh
+fi
+
+. <(npm completion 2>/dev/null)
+
+# Aliases
+
+[ -f ~/.aliasrc ] && . ~/.aliasrc

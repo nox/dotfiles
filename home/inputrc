@@ -1,0 +1,8 @@
+set bind-tty-special-chars off
+set convert-meta off
+set output-meta on
+
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+
+"\C-w": backward-kill-word

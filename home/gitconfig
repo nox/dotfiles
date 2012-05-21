@@ -1,0 +1,37 @@
+[alias]
+	st = status -s
+	ci = commit
+	co = checkout
+	br = branch
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	ls = ls-files
+	pub = push -u origin HEAD
+	rb = rebase
+	fix = commit --no-edit --amend
+	rbc = rebase --continue
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+	ui = auto
+[core]
+  excludesfile = ~/.gitignore
+[interactive]
+	singlekey = 1
+[tig]
+	line-graphics = utf-8
+	show-line-numbers = yes
+	line-number-interval = 1
+[push]
+	default = upstream
+[merge]
+	ff = false
+[rerere]
+	enabled = true
+[diff]
+	mnemonicprefix = true
+[credential]
+	helper = osxkeychain
+[include]
+	path = ~/.gitconfig-local

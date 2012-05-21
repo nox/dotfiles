@@ -1,0 +1,5 @@
+if [ -n "$BREW_PREFIX" ]; then
+  . $BREW_PREFIX/Library/Contributions/brew_bash_completion.sh
+fi
+complete -F _known_hosts knock
+complete -F _git hub
