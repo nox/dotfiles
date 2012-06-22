@@ -24,14 +24,17 @@
 	show-line-numbers = yes
 	line-number-interval = 1
 [push]
-	default = upstream
+	default = simple
 [merge]
 	ff = false
 [rerere]
 	enabled = true
 [diff]
 	mnemonicprefix = true
+	renames = copy
 [credential]
 	helper = osxkeychain
 [include]
 	path = ~/.gitconfig-local
+[pull]
+	rebase = true
