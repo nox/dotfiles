@@ -2,7 +2,9 @@ set bind-tty-special-chars off
 set convert-meta off
 set output-meta on
 
-"\e[1;5C": forward-word
-"\e[1;5D": backward-word
+"\e[1;5D": beginning-of-line
+"\e[1;5C": end-of-line
+"\e[1;9D": backward-word
+"\e[1;9C": forward-word
 
 "\C-w": backward-kill-word
