@@ -1,3 +1,7 @@
+# TTY behaviour
+
+stty -ixon
+
 # Bash behaviour
 
 shopt -s \
