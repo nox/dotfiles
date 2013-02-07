@@ -38,6 +38,14 @@ PS1='\[`tput setaf 2`\]\u@\h\
 \[`tput sgr0`\]
 \$ '
 
+# GTK
+
+if [ -n $BREW_PREFIX ]; then
+  if [ -d $BREW_PREFIX/lib/gtk-2.0 ]; then
+    export GTK_PATH=$BREW_PREFIX/lib/gtk-2.0
+  fi
+fi
+
 # Completions
 
 if [ -n $BREW_PREFIX ]; then
