@@ -24,7 +24,7 @@
 	show-line-numbers = yes
 	line-number-interval = 1
 [push]
-	default = simple
+	default = upstream
 [merge]
 	ff = false
 [rerere]
