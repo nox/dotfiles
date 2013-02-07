@@ -24,6 +24,8 @@ fi
 
 [ -d ~/bin ] && export PATH=~/bin:$PATH
 
+[ -d ~/.cabal ] && export PATH=~/.cabal/bin:$PATH
+
 # Source non login initialisation file
 
 [ -f ~/.bashrc ] && . ~/.bashrc
