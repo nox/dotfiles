@@ -1,6 +1,8 @@
 set bind-tty-special-chars off
 set convert-meta off
+set history-preserve-point on
 set output-meta on
+set print-completions-horizontally on
 
 "\e[1;5D": beginning-of-line
 "\e[1;5C": end-of-line
@@ -8,3 +10,5 @@ set output-meta on
 "\e[1;9C": forward-word
 
 "\C-w": backward-kill-word
+
+"\C-x\C-e": edit-and-execute-command
