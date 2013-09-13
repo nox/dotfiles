@@ -29,13 +29,18 @@ function __git_ps1 {
   :
 }
 
+GREEN=`tput setaf 2`
+BLUE=`tput setaf 6`
+YELLOW=`tput setaf 3`
+RESET=`tput sgr0`
+
 PROMPT_COMMAND=echo
-PS1='\[`tput setaf 2`\]\u@\h\
-\[`tput sgr0`\]:\
-\[`tput setaf 6`\]\w\
-\[`tput setaf 3`\]\
+PS1='\[$GREEN\]\u@\h\
+\[$RESET\]:\
+\[$BLUE\]\w\
+\[$YELLOW\]\
 `__git_ps1 [%s]`\
-\[`tput sgr0`\]
+\[$RESET\]
 \$ '
 
 # GTK
