@@ -16,10 +16,6 @@ if [ -n $BREW_PREFIX ]; then
     export GEM_HOME=`brew --prefix ruby`
     export PATH=`brew --prefix ruby`/bin:$PATH
   fi
-
-  if [ -d $BREW_PREFIX/share/python ]; then
-    export PATH=$BREW_PREFIX/share/python:$PATH
-  fi
 fi
 
 [ -d ~/bin ] && export PATH=~/bin:$PATH
