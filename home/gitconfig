@@ -40,3 +40,7 @@
 	path = ~/.gitconfig-local
 [pull]
 	rebase = true
+[log]
+	mailmap = true
+	decorate = true
+	date = local
