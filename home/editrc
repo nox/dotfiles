@@ -1,0 +1,8 @@
+bind "^S" em-inc-search-next
+
+bind "\e[1;5D" ed-move-to-beg
+bind "\e[1;5C" ed-move-to-end
+bind "\e[1;9D" vi-prev-word
+bind "\e[1;9C" em-next-word
+
+bind "^W" ed-delete-prev-word
