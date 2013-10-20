@@ -10,7 +10,7 @@
 	fix = commit --no-edit --amend
 	rbc = rebase --continue
 	dc = diff --cached
-	last-10 = for-each-ref --count=10 --sort=-committerdate refs/heads/ --format='%(committerdate:short) %(refname:short)'
+	config-local = !git config -f ~/.gitconfig-local
 [color]
 	branch = auto
 	diff = auto
