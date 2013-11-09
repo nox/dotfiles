@@ -10,7 +10,7 @@
 	fix = commit --no-edit --amend
 	rbc = rebase --continue
 	dc = diff --cached
-	config-local = !git config -f ~/.gitconfig-local
+	config-site = !git config -f ~/.config/git/site
 [color]
 	branch = auto
 	diff = auto
@@ -37,7 +37,7 @@
 [credential]
 	helper = osxkeychain
 [include]
-	path = ~/.gitconfig-local
+	path = ~/.config/git/site
 [pull]
 	rebase = true
 [log]
