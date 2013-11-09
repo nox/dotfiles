@@ -2,7 +2,6 @@ set bind-tty-special-chars off
 set convert-meta off
 set history-preserve-point on
 set output-meta on
-set print-completions-horizontally on
 
 "\e[1;5D": beginning-of-line
 "\e[1;5C": end-of-line
