@@ -1,0 +1,4 @@
+[url "persistent-https"]
+    insteadOf = https
+[url "persistent-http"]
+    insteadOf = http
