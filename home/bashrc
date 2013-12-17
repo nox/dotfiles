@@ -34,6 +34,7 @@ BLUE=`tput setaf 6`
 YELLOW=`tput setaf 3`
 RESET=`tput sgr0`
 
+PROMPT_DIRTRIM=3
 PROMPT_COMMAND=echo
 PS1='\[$GREEN\]\u@\h\
 \[$RESET\]:\
