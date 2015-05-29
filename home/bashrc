@@ -21,28 +21,12 @@ export GREP_OPTIONS=--color
 
 # Prompt
 
-GIT_PS1_SHOWDIRTYSTATE=
-GIT_PS1_SHOWSTASHSTATE=
-GIT_PS1_SHOWUNTRACKEDFILES=
-GIT_PS1_SHOWUPSTREAM=auto
-function __git_ps1 {
-  :
-}
-
-GREEN=`tput setaf 2`
-BLUE=`tput setaf 6`
-YELLOW=`tput setaf 3`
-RESET=`tput sgr0`
-
-PROMPT_DIRTRIM=3
 PROMPT_COMMAND=echo
-PS1='\[$GREEN\]\u@\h\
-\[$RESET\]:\
-\[$BLUE\]\w\
-\[$YELLOW\]\
-`__git_ps1 [%s]`\
-\[$RESET\]
-\$ '
+if [ -n $BREW_PREFIX ]; then
+  if [ -f $BREW_PREFIX/share/liquidprompt ]; then
+    . $BREW_PREFIX/share/liquidprompt
+  fi
+fi
 
 # GTK
 
